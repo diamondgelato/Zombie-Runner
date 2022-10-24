@@ -23,8 +23,6 @@ public class WeaponZoom : MonoBehaviour
     void Start()
     {
         MainCamera = FindObjectOfType<Camera>();
-        // Debug.Log(MainCamera.fieldOfView);
-
         player = GetComponentInParent<RigidbodyFirstPersonController>(); 
     }
 
@@ -38,12 +36,10 @@ public class WeaponZoom : MonoBehaviour
     
     public void ToggleZoom (bool zoom) {
         if (zoom) {
-            // Debug.Log(zoom);
             MainCamera.fieldOfView = zoomedFOV;
             player.mouseLook.XSensitivity = zoomedSens;
             player.mouseLook.YSensitivity = zoomedSens;
         } else {
-            // Debug.Log(zoom);
             MainCamera.fieldOfView = normalFOV;
             player.mouseLook.XSensitivity = normalSens;
             player.mouseLook.YSensitivity = normalSens;

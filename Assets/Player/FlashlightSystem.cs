@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlashlightSystem : MonoBehaviour
 {
-    [SerializeField] float lightDecay = 0.1f;
-    [SerializeField] float angleDecay = 1f;
+    [SerializeField] float lightDecay = 0.05f;
+    [SerializeField] float angleDecay = 0.5f;
     [SerializeField] float minAngle = 40f;
 
     Light flashLight;

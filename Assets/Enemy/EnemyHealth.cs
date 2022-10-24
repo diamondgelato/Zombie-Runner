@@ -13,7 +13,6 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage (float damage) {
         BroadcastMessage("OnDamageTaken");
         hitPoints -= damage;
-        // Debug.Log(gameObject.name + " health: " + hitPoints);
 
         if (hitPoints <= 0) {
             Die();
@@ -25,6 +24,11 @@ public class EnemyHealth : MonoBehaviour
 
         isDead = true;
         GetComponent<Animator>().SetTrigger("Die");
-        // Destroy(gameObject);
+        StartCoroutine(RemoveEnemy());
+    }
+
+    private IEnumerator RemoveEnemy() {
+        yield return new WaitForSeconds(2.0f);
+        gameObject.SetActive(false);
     }
 }

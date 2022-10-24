@@ -12,7 +12,6 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void QuitGame () {
-        Debug.Log("bye bye");
         Time.timeScale = 1;
         Application.Quit();
     }

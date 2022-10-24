@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0.1270014, y: -0.0000000018626447, z: -0.005487272, w: 0.99188733}
   m_LocalPosition: {x: 0, y: -0.0000015497208, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -106,6 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfafcf60faed6d40b377d5d802d19a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightDecay: 0.1
-  angleDecay: 1
+  lightDecay: 0.05
+  angleDecay: 0.5
   minAngle: 40

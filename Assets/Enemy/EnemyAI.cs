@@ -30,14 +30,15 @@ public class EnemyAI : MonoBehaviour
             enabled = false;
             navMeshAgent.enabled = false;
         }
-
-        distanceToTarget = Vector3.Distance(target.position, transform.position);
-        
-        if (isProvoked) {
-            EngageTarget();
-        } else if (distanceToTarget <= chaseRange) {
-            isProvoked = true;
-        }
+		else {
+			distanceToTarget = Vector3.Distance(target.position, transform.position);
+			
+			if (isProvoked) {
+				EngageTarget();
+			} else if (distanceToTarget <= chaseRange) {
+				isProvoked = true;
+			}
+		}
     }
 
     private void EngageTarget() {
@@ -62,7 +63,6 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget () {
         GetComponent<Animator>().SetBool("Attack", true);
-        // Debug.Log("hehe i've attacked the player");
     }
 
     private void FaceTarget () {

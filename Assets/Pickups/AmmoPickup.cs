@@ -8,9 +8,7 @@ public class AmmoPickup : MonoBehaviour
     [SerializeField] int ammoAmmount = 5;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            Debug.Log(other.gameObject.name + " got ammo");
-            
+        if (other.gameObject.tag == "Player") {            
             Ammo playerAmmo = other.gameObject.GetComponent<Ammo>();
             playerAmmo.IncreaseCurrentAmmo(ammoType, ammoAmmount);
 

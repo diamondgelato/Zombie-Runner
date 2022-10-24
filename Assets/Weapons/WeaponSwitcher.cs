@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WeaponSwitcher : MonoBehaviour
 {
+	[SerializeField] TMP_Text activeWeaponName;
     [SerializeField] int currentWeapon = 0;
+	
+	string[] gunNames = [
+	    "Machine Gun",
+		"Shotgun",
+		"Rifle",
+		"Knife"
+	];
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +32,7 @@ public class WeaponSwitcher : MonoBehaviour
         if (previousWeapon != currentWeapon) {
             RemoveZoom(previousWeapon);
             SetWeaponActive();
+			activeWeaponName.text = gunNames[currentWeapon];
         }
     }
 
@@ -50,8 +60,6 @@ public class WeaponSwitcher : MonoBehaviour
                 currentWeapon--;
             }
         }
-
-        // Debug.Log(currentWeapon);
     }
 
     private void SetWeaponActive() {
@@ -75,9 +83,7 @@ public class WeaponSwitcher : MonoBehaviour
 
         WeaponZoom weaponZoom = weapon.gameObject.GetComponent<WeaponZoom>();
         if (weaponZoom) {
-            // Debug.Log(weapon.gameObject.name + " Found weaponZoom");
             weaponZoom.ToggleZoom(false);
-            // weaponZoom.IsZoomed = false;
         }
     }
 

@@ -19,8 +19,6 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable() {
         canShoot = true;
-
-        // AmmoText = GameObject.Find("AmmoAmount").GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -55,8 +53,6 @@ public class Weapon : MonoBehaviour
     private void ProcessRaycast () {
         RaycastHit hit;
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range)) {
-            // Debug.Log(hit.transform.name);
-            
             // add hit effect
             CreateHitImpact(hit);
 
