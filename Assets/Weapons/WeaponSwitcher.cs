@@ -8,12 +8,12 @@ public class WeaponSwitcher : MonoBehaviour
 	[SerializeField] TMP_Text activeWeaponName;
     [SerializeField] int currentWeapon = 0;
 	
-	string[] gunNames = [
+	string[] gunNames = new string[4]{
 	    "Machine Gun",
 		"Shotgun",
 		"Rifle",
 		"Knife"
-	];
+	};
 
     // Start is called before the first frame update
     void Start()

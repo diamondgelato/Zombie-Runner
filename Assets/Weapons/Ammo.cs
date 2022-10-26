@@ -23,6 +23,8 @@ public class Ammo : MonoBehaviour
     }
 
     public void ReduceCurrentAmmo (AmmoType ammoType) {
+		if (ammoType == AmmoType.None) return;
+		
         GetAmmoSlot(ammoType).ammoAmount--;
         // UpdateAmmoUI(GetAmmoSlot(ammoType).ammoAmount);
     }

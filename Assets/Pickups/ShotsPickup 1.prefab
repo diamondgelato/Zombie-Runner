@@ -168,13 +168,21 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.35
       objectReference: {fileID: 0}
+    - target: {fileID: 5878138455100692302, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_text
+      value: Shotgun
+      objectReference: {fileID: 0}
     - target: {fileID: 6480637540571092955, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6870063903768439809, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
       propertyPath: m_Name
       value: ShotsPickup 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002565609537933278, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}

@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem MuzzleFlash;
     [SerializeField] GameObject HitEffectVFX;
     [SerializeField] Ammo AmmoSlot;
-    [SerializeField] AmmoType AmmoType;
+    [SerializeField] AmmoType ammoType;
     [SerializeField] float damage = 30f;
     [SerializeField] float range = 50f;
     [SerializeField] float timeBetweenShots = 1f;
@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && AmmoSlot.GetCurrentAmmo(AmmoType) > 0 && canShoot) {
+        if (Input.GetMouseButtonDown(0) && (ammoType == AmmoType.None || (AmmoSlot.GetCurrentAmmo(ammoType) > 0 && canShoot))) {
             StartCoroutine(Shoot());
         }
 
@@ -32,21 +32,22 @@ public class Weapon : MonoBehaviour
     }
 
     private void DisplayAmmo() {
-        AmmoText.text = AmmoSlot.GetCurrentAmmo(AmmoType).ToString();
+        AmmoText.text = AmmoSlot.GetCurrentAmmo(ammoType).ToString();
     }
 
     private IEnumerator Shoot () {
         canShoot = false;
-
+		
         PlayMuzzleFlash();
         ProcessRaycast();
-        AmmoSlot.ReduceCurrentAmmo(AmmoType);
+        AmmoSlot.ReduceCurrentAmmo(ammoType);
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
     }
 
     private void PlayMuzzleFlash() {
+		if (MuzzleFlash == null) return;
         MuzzleFlash.Play();
     }
 
@@ -69,6 +70,9 @@ public class Weapon : MonoBehaviour
     }
 
     private void CreateHitImpact (RaycastHit hit) {
+		// return if no hit effect assigned
+		if (HitEffectVFX == null) return;
+		
         // Instantiate effect where raycast collides
         GameObject impact = Instantiate(HitEffectVFX, hit.point, Quaternion.LookRotation(hit.normal));
 

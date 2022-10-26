@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9170933, y: 0.83568627, z: -0.1413934}
   m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 466178}
   m_RootOrder: 1
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -110,6 +112,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 407052}
   - {fileID: 420530}
@@ -119,7 +122,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 4.599, y: 245.258, z: 12.172}
 --- !u!95 &9541160
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,6 +135,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -152,9 +156,11 @@ MonoBehaviour:
   MuzzleFlash: {fileID: 2097083246437605030}
   HitEffectVFX: {fileID: 7770084685569153851, guid: 40bcbe6470c697f468130878975e420c, type: 3}
   AmmoSlot: {fileID: 0}
+  ammoType: 2
   damage: 120
   range: 50
   timeBetweenShots: 5
+  AmmoText: {fileID: 0}
 --- !u!114 &9174613002799486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +205,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.12888709, y: 0.6378934, z: -0.14139341}
   m_LocalScale: {x: 2.54, y: 2.54, z: 2.54}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 466178}
   m_RootOrder: 0
@@ -222,6 +229,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -321,13 +329,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afd9bba9b5018c94d908b8b0fa2e9dd5, type: 3}
---- !u!4 &8028209305294653487 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3869893748494691272, guid: afd9bba9b5018c94d908b8b0fa2e9dd5, type: 3}
-  m_PrefabInstance: {fileID: 6547514844786271207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &2097083246437605030 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 5172142372712299841, guid: afd9bba9b5018c94d908b8b0fa2e9dd5, type: 3}
+  m_PrefabInstance: {fileID: 6547514844786271207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8028209305294653487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3869893748494691272, guid: afd9bba9b5018c94d908b8b0fa2e9dd5, type: 3}
   m_PrefabInstance: {fileID: 6547514844786271207}
   m_PrefabAsset: {fileID: 0}

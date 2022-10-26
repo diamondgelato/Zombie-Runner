@@ -280,13 +280,41 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1032d41f900276c40a9dd24f55b7d420, type: 2}
+    - target: {fileID: 4327020991534226608, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_text
+      value: Machine Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327020991534226608, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327020991534226608, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878138455100692302, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_text
+      value: Machine GUn
+      objectReference: {fileID: 0}
     - target: {fileID: 6480637540571092955, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523401547849300235, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523401547849300235, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.116
       objectReference: {fileID: 0}
     - target: {fileID: 6870063903768439809, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
       propertyPath: m_Name
       value: RoundsPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002565609537933278, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c459cca21efdfbc4f8a8f88fa1cb8d6a, type: 3}

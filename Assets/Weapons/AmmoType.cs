@@ -1,5 +1,6 @@
 public enum AmmoType {
     Rounds,
     Shots,
-    Bullets
+    Bullets,
+    None
 }
